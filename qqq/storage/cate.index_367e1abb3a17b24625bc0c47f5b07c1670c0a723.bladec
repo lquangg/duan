@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <table border="1">
+ <tr>
+ <td>Size</td>
+ <td>Số lượng</td>
+ </tr>
+ <?php $__currentLoopData = $pro; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $v): $loop = $this->incrementLoopIndices();  ?>
+ <tr>
+ <td><?php echo \htmlentities($v->size??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td><?php echo \htmlentities($v->soluong??'', ENT_QUOTES, 'UTF-8', false); ?></td>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </table>
+</body>
+</html>
