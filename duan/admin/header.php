@@ -10,14 +10,17 @@
 <body>
     <div class="container">
 
-        <div class="row  header">
-            <h1 class="header1">ADMIN</h1>
+        <header>
+           
+        
+        <div class="logo">
+        <a href="index.php"><img  src="../view/img/logo.png" alt=""></a>
         </div>
-        <div class="row  ">
              <nav>
+                
                 <ul>
-                    <li><a href="index.php">Trang chủ</a></li>
-                    <li><a href="index.php?act=adddm">Danh mục</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="index.php?act=adddm">Danh mục</a></li>
                 <li><a href="index.php?act=addsp">Hàng hóa</a></li>
                 <li><a href="index.php?act=dskh">Khách hàng</a></li>
                 <li><a href="index.php?act=dsbl">Bình luận </a></li>
@@ -25,4 +28,6 @@
                 </ul>
              </nav>
             
+        
         </div>
+</header>

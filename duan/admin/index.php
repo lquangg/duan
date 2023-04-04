@@ -3,6 +3,7 @@
    include  "../model/pdo.php";
    include "../model/danhmuc.php";
    include "../model/sanpham.php";
+   include "../model/taikhoan.php";
 
    if(isset($_GET['act'])){
       $act=$_GET['act'];
@@ -133,6 +134,10 @@
             default: 
             include "home.php";
             break;
+            case 'dskh':
+               $listk=loadall_taikhoan();
+               include "taikhoan/list.php";
+               break; 
             // case: "size":
 
       }

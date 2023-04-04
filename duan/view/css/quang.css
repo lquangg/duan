@@ -3,7 +3,7 @@
       box-sizing: border-box;
 }
 .container{
-    width:70% ;
+    width:1440px ;
     margin: 0 auto;
 }
 .row{
@@ -15,8 +15,20 @@
     margin-right: 2%;
     
 }
+.ndct{
+    text-align: center;
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5rem;
+}
+.giua{
+    text-align: center;
+}
 .mg{
     padding: 20px;
+}
+.ndphai{
+    width: 30%;
 }
 .mabot{
     margin-bottom: 20px;
@@ -28,12 +40,9 @@
 .d{
     width: 30%;
 }
-.header{
-    background-color: rgb(43, 39, 39);
-    border: 1px green solid;
-    font-size: 1w;
-    color: red;
-    border-radius: 5px;
+header{
+   display: flex;
+   
 }
 .a{
     text-align: center;
@@ -53,8 +62,7 @@
     gap:2rem;
 }
 .im img{
-    width: 100%;
-    padding:8px;
+    width:100%;
 }
 .tt{
     text-align: center;
@@ -81,19 +89,27 @@
     height: 30px;
     float:right;
 }
-nav{
-     
-      display: inline-block;
-      text-decoration: none;
-      background-color: rgb(217, 91, 91);
-     
-     width: 100%;
-     
-     
-    
-      
 
+.sp{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3rem;
+   
+  
 }
+
+.ndsp img{
+    width: 100%;
+}
+.ndtrai{
+    width: 130%;
+}
+.home{
+   display: flex;
+   gap: 3rem;
+}
+
 footer{
     background-color: aquamarine;
     text-align: center;
@@ -105,25 +121,50 @@ footer{
 }
    
     
-   
-
-nav ul li{
-    
+nav{
+     
     display: inline-block;
-    margin-left: 60px;
- 
-}
-nav ul a{
     text-decoration: none;
+     padding-top: 150px;
     
 }
-nav ul a:hover{
+nav ul{
+    display: flex;
+    gap:  3rem;
+}
+nav ul li{
+    position:relative;
+    display: inline-block;
+}
+.submenu {
+    display:none;
+    position:absolute;
+    width:220px;
+    background:orange;
+
+}
+.submenu li{
+    display:block;
+}
+
+nav ul li:hover .submenu{
+    display:block;
+}
+
+nav ul  a{
+    text-decoration: none;
+    width: 200px;
+    
+}
+
+nav ul > a:hover{
    color: red;
    background-color: chartreuse;
 }
 
 .k{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 3rem;
     
 }
