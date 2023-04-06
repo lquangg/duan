@@ -29,24 +29,25 @@
             <td>Chức năng</td>
         </tr>
         <?php
-       foreach($_SESSION['mycart'] as $a){
-        $hinh=$img_path.$a[2];
-        $tt=$a[3]*$a[4];
+
+       foreach($_SESSION['mycart']  as $a ){
+       var_dump($a);
+       die();
+    
+        
+       
         $tong+=$tt;
         
           echo '  <tr>
-                <td><img src="'.$img.'" width="50%" alt=""></td>
-                <td>'.$a[1].' </td>
-                <td>'.$a[3].'</td>
-                <td>'.$a[4].'</td>
-                <td>'.$tt.'</td>
+                <td><img src="'.$img.'"  alt=""></td>
+               
             </tr>';
        
+       
        }
-       echo '  <td>'.$tong.' </td>'
        ?>
 
       </table>
-       <button class="b">Thanh toán</button>
+       
 </body>
 </html>

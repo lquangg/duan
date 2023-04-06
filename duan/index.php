@@ -15,6 +15,24 @@ session_start();
         case 'gioithieu':
               include "view/gt.php";
             break;
+            case 'sanpham':
+                
+                if(isset($_POST['timki'])&&($_POST['timki']!="")){
+                 $search=$_POST['search'];
+                }else{
+                    $search="";
+                }
+                if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
+                   $iddm=$_GET['iddm'];
+                   
+                }else{
+                    $iddm=0;
+                }
+                $dssp=loadall_sanpham("",$iddm);
+                $tendm=loadten($iddm);
+                include "view/sanpham.php";
+                break;    
+           
         case 'spchitiet':
             if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
                $id=$_GET['idsp'];
@@ -30,7 +48,7 @@ session_start();
 
              break;
             default:
-            include "view/home.php";
+
             break;
          case 'dangnhap': 
             if(isset($_POST['dangnhap'])&&($_POST['dangnhap'])){
@@ -92,15 +110,17 @@ session_start();
                 
                    
                 case 'giohang':
+                    
                     if(isset($_POST['giohang'])&&($_POST['giohang'])){
                        $id=$_POST['id'];
                         $name=$_POST['name'];
                         $price=$_POST['price'];
                         $img=$_POST['img'];
-                       $soluong=1;
-                       $tt=$soluong * $price;
-                       $spadd=[$id,$name,$price,$img,$soluong,$tt];
-                       array_push($_SESSION['mycart'],$spadd);
+                    
+                       $dm=[$id,$name,$price,$img];
+                       array_push($_SESSION['mycart'],$dm);
+                       var_dump($_SESSION['mycart']) ;
+                       die();
 
                     }
                 include "view/giohang.php";

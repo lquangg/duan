@@ -42,6 +42,7 @@
 }
 header{
    display: flex;
+   gap: 2rem;
    
 }
 .a{
@@ -89,21 +90,37 @@ header{
     height: 30px;
     float:right;
 }
-
+.cach{
+    padding: 0px 250px;
+}
 .sp{
-    margin-left: 50px;
+    
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 3rem;
+    gap: 4rem;
    
   
+}
+.danhm{
+    display: flex;
+   margin-right:   200px;
+   justify-content: center;
+  
+   
+}
+.search{
+  display: flex;
+   width: 100%;
+    
+    
+ 
 }
 
 .ndsp img{
     width: 100%;
 }
 .ndtrai{
-    width: 130%;
+    width: 100%;
 }
 .home{
    display: flex;
@@ -125,7 +142,8 @@ nav{
      
     display: inline-block;
     text-decoration: none;
-     padding-top: 150px;
+    padding: 50px;
+    
     
 }
 nav ul{

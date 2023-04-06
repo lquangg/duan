@@ -53,7 +53,7 @@ $i=0;
 
       <input type="hidden" name="price" value="'.$price.'">
 
-      <input type="submit" name="giohang" value="Thêm vào giỏ hàng">
+      <input type="submit" width="50px" height="100px" name="giohang" value="Thêm vào giỏ hàng">
 
     </form>
   

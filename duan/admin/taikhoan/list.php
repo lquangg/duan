@@ -19,8 +19,7 @@
                     </tr> 
                     <?php
                     foreach($listk as $tk){
-                        var_dump($tk);
-                        die();
+                       
                         extract($tk);
                           $suatk="index.php?act=suatk".$id;
                           $xoatk="index.php?act=xoatk".$id;

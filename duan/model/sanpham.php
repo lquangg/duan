@@ -27,6 +27,16 @@ function loadall_sanpham($kyw="",$iddm=0){
                return $lissanpham;
     
 }
+function loadten($iddm){
+    if($iddm>0){
+    $sql="select * from danhmuc where id=".$iddm;
+    $dm=pdo_query_one($sql);
+    extract($dm);
+    return $name;
+    }else{
+      return "";
+    }
+}
 function loadone_sanpham($id){
     $sql="select * from sanpham where id=".$id;
     $dm=pdo_query_one($sql);
@@ -39,4 +49,5 @@ function  update_sanpham($iddm,$id,$tensp, $price,$mota,$img){
        $sql="update sanpham set name='".$tensp."',iddm='".$iddm."',price='".$price."',mota='".$mota."'  where id=".$id;
     pdo_execute($sql);
 }
+
 ?>
