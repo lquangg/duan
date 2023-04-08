@@ -19,6 +19,7 @@
     </style>
 </head>
 <body>
+   
       <table class="a" >
         <tr>
             <td>id</td>
@@ -27,24 +28,30 @@
             <td>Số lượng</td>
             <td>Tạm tính</td>
             <td>Chức năng</td>
+          
         </tr>
         <?php
 
        foreach($_SESSION['mycart']  as $a ){
-       var_dump($a);
-       die();
+        
+        $img=$img_path.$a[2];
+        // $tt=$a[3]*$a[4];
+        // $tong+=$tt;
+      echo '  <tr>
+      <td> <img src="'.$img.'" alt=""></td>
+      <td>'.$a[1].'</td>
+      <td>'.$a[3].' </td>
+      <td>'.$a[4].'</td>
+      <td></td>
+      <td> <input type="button" value="xoa"></td>
+  </tr>';
+    
+       }
     
         
-       
-        $tong+=$tt;
-        
-          echo '  <tr>
-                <td><img src="'.$img.'"  alt=""></td>
-               
-            </tr>';
+         
        
        
-       }
        ?>
 
       </table>

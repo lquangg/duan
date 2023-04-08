@@ -17,10 +17,10 @@ session_start();
             break;
             case 'sanpham':
                 
-                if(isset($_POST['timki'])&&($_POST['timki']!="")){
-                 $search=$_POST['search'];
+                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                 $kyw=$_POST['kyw'];
                 }else{
-                    $search="";
+                    $kyw="";
                 }
                 if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
                    $iddm=$_GET['iddm'];
@@ -28,7 +28,7 @@ session_start();
                 }else{
                     $iddm=0;
                 }
-                $dssp=loadall_sanpham("",$iddm);
+                $dssp=loadall_sanpham($kyw,$iddm);
                 $tendm=loadten($iddm);
                 include "view/sanpham.php";
                 break;    
@@ -116,11 +116,12 @@ session_start();
                         $name=$_POST['name'];
                         $price=$_POST['price'];
                         $img=$_POST['img'];
-                    
-                       $dm=[$id,$name,$price,$img];
-                       array_push($_SESSION['mycart'],$dm);
-                       var_dump($_SESSION['mycart']) ;
-                       die();
+                            $soluong=1;
+                            
+                       $spadd=[$id,$name,$img,$price,$soluong];
+                       array_push($_SESSION['mycart'],$spadd);
+                    //    var_dump($_SESSION['mycart']) ;
+                    //    die();
 
                     }
                 include "view/giohang.php";

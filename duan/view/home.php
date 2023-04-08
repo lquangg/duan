@@ -33,7 +33,7 @@
                
                   <li> <div class="search">
                     <form action="index.php?act=sanpham" method="post">
-                <input  type="text" name="search"  placeholder="Nhập..."><input type="submit" name="timki" value="Tìm Kiếm">
+                <input  type="text" name="kyw"  placeholder="Nhập..."><input type="submit" name="timki" value="Tìm Kiếm">
                     </form>
                </div>   </li>
                 </ul>

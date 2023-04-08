@@ -15,7 +15,7 @@ $i=0;
    
     echo  '
    
-        <img src="'.$img.'" alt="">
+        <img width="100%" src="'.$img.'" alt="">
 
      ';
      
@@ -46,6 +46,7 @@ $i=0;
     <button>42</button>
     </div>
     <form action="index.php?act=giohang" method="post">
+      
       <input type="hidden" name="id" value="'.$id.'">
       <input type="hidden" name="img" value="'.$img.'">
 
